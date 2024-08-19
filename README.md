@@ -26,51 +26,50 @@ The association relationship indicates that a class knows about another class. I
 
 For example, if we talk about the association between a teacher and a student, multiple students can associate with a single teacher and a single student is also associated with multiple teachers but both can be created or deleted independently. So, when a teacher leaves the school, we don’t need to remove any students, and when a student leaves the school, we don’t need to remove any teachers.
 
+Aggretation is when the student can exist without the teacher.
+Composition is when the student can only exist with the teacher
+
 ![image](https://github.com/user-attachments/assets/72abca30-0423-411d-b854-1a2a17a14bfe)
 
 
 So, in the above example, the teacher has many students and vice versa, connectes to various objects. Thus, we can say the association in Java follows a many-to-many relationship.
 
 ```
-class Teacher
-{
-  private String name;
-  Teacher(String name)
-  {
-    this.name = name;
-  }
-  public String getTeacherName()
-  {
-    return this.name;
-  }
-}
-class Student
-{
-  private String name;
-  Student(String name)
-  {
-    this.name = name;
-  }
-  public String getStudentName()
-  {
-    return this.name;
-  }
-}
-class AssociationDemo
-{
-  public static void main (String[] args)
-  {
-    Teacher teacherObj = new Teacher("Chris");
-    Student studentObj = new Student("Wellington");
-    System.out.println(studentObj.getStudentName() +
-        " is Student of " + teacherObj.getTeacherName());
-  }
-}
+
 ```
 
 ### Agregation
+
+```
+public class Conta {
+  //Membros da Classe
+  int numero;
+  float saldo;
+  float limite;
+  Cliente titular;
+}
+
+public class Cliente {
+  String nome;
+  String endereco;
+  String cpf;
+}
+
+public class Main {
+ public static void main(String[] args) {
+    Conta conta = new Conta();
+    Cliente cliente = new Cliente();
+
+    conta.titular = cliente;
+  }
+}
+```
 
 ![image](https://github.com/user-attachments/assets/86b3aa39-4190-46e7-ab28-424f218ebc70)
 
 
 ### Composition
+
+```
+
+```
