@@ -71,5 +71,14 @@ public class Main {
 ### Composition
 
 ```
+public class Empresa {
+  String nome;
+  Departamento dep;
+
+  public Empresa() {
+    dep = new Departamento();
+  }
+}
+
 
 ```
