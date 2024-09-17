@@ -25,4 +25,16 @@ public class Livro {
     {
         return this.nomeAutor;
     }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public int getnPaginas() {
+        return nPaginas;
+    }
+
+    public String getCategoria() {
+        return categoria;
+    }
 }
