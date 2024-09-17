@@ -5,7 +5,11 @@ public class Bibliotecario {
 
     public void listarLivros(Biblioteca biblioteca)
     {
-
+        for (int i = 0; i < biblioteca.getLivros().length; i++) {
+            System.out.println("Título: " + biblioteca.getLivros()[i].getTitulo());
+            System.out.println("Número de Páginas: " + biblioteca.getLivros()[i].getnPaginas());
+            System.out.println("Categoria: " + biblioteca.getLivros()[i].getCategoria());
+        }
     }
 
     @Override
