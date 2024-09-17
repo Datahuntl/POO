@@ -14,7 +14,7 @@ public class Biblioteca {
 
     public void emprestarLivro(Bibliotecario b1, Cliente c1, Livro l1)
     {
-        if(b1.getDisponivel() == true & c1.getDebito()==0 & confereLivro(l1) == true)
+        if(b1.getDisponivel() & c1.getDebito()==0 & confereLivro(l1))
         {
             removerLivro(l1);
             System.out.println("Livro emprestado.");
@@ -65,5 +65,9 @@ public class Biblioteca {
     @Override
     public String toString() {
         return super.toString();
+    }
+
+    public Livro[] getLivros() {
+        return livros;
     }
 }
