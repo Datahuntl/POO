@@ -20,10 +20,14 @@ public class Main {
         C2.setIdade(34);
 
         Livro L1 = new Livro("1984", 124, "Ficção");
-        Livro L2 = new Livro("Laranja Mecanica", 254, "Ficção");
+        Livro L2 = new Livro("Laranja Mecânica", 254, "Ficção");
         Livro L3 = new Livro("Admirável Mundo Novo", 54, "Ficção");
         Livro L4 = new Livro("Metrópolis", 569, "Ficção");
-        Livro L5 = new Livro("");
-        Livro L6 = new Livro();
+        Livro L5 = new Livro("Fahrenheit 451", 210, "Ficção");
+        Livro L6 = new Livro("Grognak the Barbarian", 98, "Ação");
+
+        Biblioteca B1 = new Biblioteca("Biblioteca Regional", "Rua dos Marfagafos");
+
+        
     }
 }
