@@ -1,0 +1,6 @@
+Guilherme=Introdução a Engenharia
+Ynogutti=Algoritmos
+Chris=POO
+Renzao=BD
+Marcelo=CG
+Soned=Tudo
