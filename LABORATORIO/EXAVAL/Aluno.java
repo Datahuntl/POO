@@ -21,7 +21,11 @@ public class Aluno extends Usuario implements Autenticável{
 
     public double calcularMedia()
     {
+        for (int i = 0; i < 1; i++) {
+            media = notas.get(i);
+        }
         
+        return media;
     }
 
     @Override
