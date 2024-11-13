@@ -1,3 +1,5 @@
-public interface Autenticável {
-    public void acessarSistema();
+import java.util.Map;
+
+public interface Autenticavel {
+    void acessarSistema();
 }
