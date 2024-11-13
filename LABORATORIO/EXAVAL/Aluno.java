@@ -1,36 +1,44 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Aluno extends Usuario implements Autenticável{
-    private List<Double> notas = new ArrayList<Double>();
-    private double media;
+
+public class Aluno extends Usuario {
+    private List<Double> notas = new ArrayList<>();
+    private double media = 0;
+
+    public double getMedia() {
+        return media;
+    }
 
     public Aluno(String nome, int idade, int matricula) {
         super(nome, idade, matricula);
     }
 
-    private void fazerMatricula()
-    {
+    public void acessarSistema() {
 
+        fazerMatricula();
     }
 
-    public void fazerProva(double nota)
-    {
-        notas.add(nota);
-    }
-
-    public double calcularMedia()
-    {
-        for (int i = 0; i < 1; i++) {
-            media = notas.get(i);
+    private void fazerMatricula() {
+        if (calcularMedia() >= 60)
+            System.out.println("Sucesso! Matrícula feita");
+        else {
+            throw new NotaInsuficienteException("Erro na matrícula! Nota insuficiente.");
         }
-        
+    }
+
+    public void fazerProva(double nota) {
+            notas.add(nota);
+    }
+
+    public double calcularMedia() {
+        double total = 0;
+        for (double aux : notas) {
+            total = total + aux;
+        }
+        media = total / notas.size();
+
         return media;
     }
 
-    @Override
-    public void acessarSistema()
-    {
-
-    }
 }
