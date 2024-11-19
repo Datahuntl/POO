@@ -1,3 +1,5 @@
+package RedesSociais.Execeptions;
+
 public class Instagram extends RedeSocial implements Compartilhamento {
 
     @Override
